@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aditi Gupta | AI/ML & Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EAF6FF;--ink:#1E2A5A;--mute:#51619A;--pink:#FFA9CB;--mint:#A6F3D6;--sun:#FFE27A;--sky:#8FD3FF;--w:#fff;--ln:rgba(30,42,90,.18);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.65 'Instrument Sans',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;margin:0;line-height:1;font-weight:800;letter-spacing:-.03em}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:none;padding:0;text-align:inherit}
+a,button{cursor:pointer}
+@media (hover:hover) and (pointer:fine){body,a,button,.cc{cursor:none}#cur,#dot{display:block}}
+#cur,#dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;will-change:transform}
+@media (hover:none),(pointer:coarse){#cur,#dot{display:none}}
+#cur{width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid var(--ink);background:transparent;transition:width .35s,height .35s,margin .35s,background .35s,border-color .35s}
+#cur.big{width:62px;height:62px;margin:-31px 0 0 -31px;background:rgba(255,169,203,.16);border-color:#FF5C9A}
+#dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:#FF5C9A;border:1px solid var(--ink)}
+#bar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--pink),var(--sun),var(--mint),var(--sky));z-index:90}
+/* buttons: solid, outlined, offset shadow */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:99px;border:2px solid var(--ink);background:var(--pink);color:var(--ink);font-weight:700;font-size:14px;box-shadow:4px 4px 0 var(--ink);transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);background:var(--sun)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.alt{background:var(--w)}.btn.mint{background:var(--mint)}.btn.dk{background:var(--ink);color:#fff;box-shadow:4px 4px 0 var(--pink)}
+.btn.dk:hover{background:var(--ink);box-shadow:6px 6px 0 var(--pink)}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:12px 4vw}
+.logo{font:800 20px 'Bricolage Grotesque';background:var(--w);border:2px solid var(--ink);padding:6px 14px;border-radius:99px}
+.menu{display:flex;gap:4px;background:var(--w);border:2px solid var(--ink);padding:4px;border-radius:99px;box-shadow:4px 4px 0 var(--ink)}
+.menu a{padding:7px 14px;border-radius:99px;font-weight:600;font-size:13px;transition:background .2s}
+.menu a:hover{background:var(--sun)}.menu a.on{background:var(--ink);color:#fff}
+.burger{display:none;width:44px;height:44px;border-radius:50%;background:var(--w);border:2px solid var(--ink);font-size:20px;text-align:center;line-height:40px;box-shadow:3px 3px 0 var(--ink)}
+@media(max-width:860px){.burger{display:block}.menu{display:none;position:absolute;top:64px;right:4vw;flex-direction:column;border-radius:24px;padding:8px}.menu.open{display:flex}.menu a{padding:10px 18px}}
+section{padding:90px 5vw;position:relative}
+h2{font-size:clamp(30px,4.6vw,58px);margin-bottom:12px}
+.sub{color:var(--mute);margin:0 0 34px;max-width:60ch}
+#hero{min-height:100vh;display:grid;align-content:center;overflow:hidden;padding-top:120px}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+.hero-t{position:relative;z-index:2;max-width:760px;pointer-events:none}
+.hero-t a,.hero-t button{pointer-events:auto}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--w);border:2px solid var(--ink);padding:6px 14px;border-radius:99px;font-size:13px;font-weight:600;margin-bottom:22px}
+.badge i{width:9px;height:9px;border-radius:50%;background:#2BD98B;animation:pl 1.6s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(43,217,139,.6)}100%{box-shadow:0 0 0 8px rgba(43,217,139,0)}}
+h1{font-size:clamp(44px,8vw,116px);letter-spacing:-.045em}
+h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+h1 .w span{display:inline-block;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.9,.2,1) forwards}
+@keyframes up{to{transform:none}}
+.lead{font-size:clamp(15px,1.5vw,19px);max-width:520px;margin:24px 0 0;color:var(--mute)}
+.acts{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.hint{position:absolute;left:5vw;bottom:26px;font-size:12px;color:var(--mute);z-index:2;font-weight:600}
+.tick{background:var(--sun);border-block:2px solid var(--ink);overflow:hidden;white-space:nowrap;padding:12px 0;font:800 19px 'Bricolage Grotesque'}
+.tick div{display:inline-block;animation:mq 40s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+#about{background:var(--w);border:2px solid var(--ink);border-radius:44px;margin:40px 2vw 0}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+.about p{max-width:60ch;margin:0 0 14px}
+.score{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.score div{border:2px solid var(--ink);border-radius:26px;padding:20px;font-size:13px;font-weight:600;background:var(--pink);box-shadow:4px 4px 0 var(--ink);opacity:0;transform:scale(1.5) rotate(-8deg)}
+.score div:nth-child(2){background:var(--mint)}.score div:nth-child(3){background:var(--sun)}.score div:nth-child(4){background:var(--sky)}
+.score div.st{animation:stamp .55s cubic-bezier(.2,1.3,.4,1) forwards}
+@keyframes stamp{60%{opacity:1;transform:scale(.94) rotate(2deg)}100%{opacity:1;transform:none}}
+.score b{font:800 40px 'Bricolage Grotesque';display:block;line-height:1}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.skills span{padding:6px 14px;border-radius:99px;border:1.5px solid var(--ink);font-size:13px;font-weight:600;transition:background .2s,transform .2s}
+.skills span:hover{background:var(--sun);transform:translateY(-3px)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.filters button{padding:9px 20px;border-radius:99px;border:2px solid var(--ink);background:var(--w);font-weight:700;font-size:13px;box-shadow:3px 3px 0 var(--ink);transition:all .2s}
+.filters button:hover{background:var(--sun)}.filters button.on{background:var(--ink);color:#fff;box-shadow:3px 3px 0 var(--pink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;perspective:1200px}
+.pc{background:var(--c);border:2px solid var(--ink);border-radius:30px;padding:24px;min-height:270px;display:flex;flex-direction:column;justify-content:space-between;transform-style:preserve-3d;transition:transform .3s ease-out,box-shadow .3s;box-shadow:5px 5px 0 var(--ink);position:relative;overflow:hidden;width:100%}
+.pc:hover{box-shadow:9px 9px 0 var(--ink)}
+.pc::after{content:'';position:absolute;right:-50px;top:-50px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.45);transition:transform .6s cubic-bezier(.2,1,.3,1);pointer-events:none}
+.pc:hover::after{transform:scale(1.6)}
+.pc>*{position:relative;z-index:1}
+.pc .n{font:800 46px 'Bricolage Grotesque';transform:translateZ(60px);line-height:1}
+.pc h3{font-size:24px;margin:14px 0 8px;transform:translateZ(36px)}
+.pc p{margin:0;font-size:13px;opacity:.85;transform:translateZ(18px)}
+.pc .go{align-self:flex-start;margin-top:18px;padding:7px 16px;border-radius:99px;background:var(--w);border:2px solid var(--ink);font-weight:700;font-size:13px;transition:background .2s,transform .2s}
+.pc:hover .go{background:var(--ink);color:#fff;transform:translateX(4px)}
+.pc.hide{display:none}
+.pc::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.75),transparent 55%);opacity:0;transition:opacity .3s;pointer-events:none;z-index:0}
+.pc:hover::before{opacity:1}
+#modal{position:fixed;inset:0;z-index:8000;display:none;place-items:center;background:rgba(234,246,255,.82);backdrop-filter:blur(10px);padding:20px}
+#modal.on{display:grid}
+#mb{background:var(--w);border:2px solid var(--ink);border-radius:32px;max-width:580px;width:100%;padding:36px;position:relative;box-shadow:8px 8px 0 var(--ink);animation:pop .45s cubic-bezier(.2,1.3,.4,1)}
+@keyframes pop{from{transform:translateY(50px) scale(.92);opacity:0}}
+#mb h3{font-size:32px;margin-bottom:12px}
+#mb .tags span{display:inline-block;background:var(--mint);border:1.5px solid var(--ink);border-radius:99px;padding:3px 13px;margin:0 6px 6px 0;font-weight:600;font-size:13px}
+#mb .x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:var(--pink);font-size:20px;text-align:center;line-height:36px}
+#mb .ft{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.row{display:grid;grid-template-columns:80px 1fr;gap:18px;padding:24px 14px;border-top:2px solid var(--ln);border-radius:0;transition:background .3s,border-radius .3s,transform .3s}
+.row:last-child{border-bottom:2px solid var(--ln)}
+.row:hover{background:var(--mint);border-radius:22px;transform:translateX(8px)}
+.row b{font-weight:700;color:var(--mute);padding-top:4px}
+.row h3{font-size:clamp(19px,2.3vw,28px)}.row p{margin:6px 0 0;max-width:60ch;color:var(--mute)}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
+.cc{height:190px;border:2px solid var(--ink);border-radius:28px;padding:20px;background:var(--c);display:flex;flex-direction:column;justify-content:space-between;box-shadow:5px 5px 0 var(--ink);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+.cc:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:9px 9px 0 var(--ink)}
+.ico{width:60px;height:60px;border-radius:50%;border:2px solid var(--ink);background:var(--w);display:grid;place-items:center;animation:bob 3.6s ease-in-out infinite}
+@keyframes bob{50%{translate:0 -5px}}
+.cc .t{font:800 17px/1.15 'Bricolage Grotesque'}.cc small{display:block;font-weight:600;margin-top:4px;opacity:.8}
+#contact{text-align:center;background:linear-gradient(135deg,var(--pink),var(--sun));border-block:2px solid var(--ink);margin-top:40px}
+#contact h2{font-size:clamp(36px,8vw,104px);margin-bottom:16px}
+#contact .acts{justify-content:center}
+footer{text-align:center;padding:22px;font-size:13px;color:var(--mute)}
+#top{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:70;width:48px;height:48px;border-radius:50%;background:var(--sun);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font-size:20px;text-align:center;line-height:44px;opacity:0;pointer-events:none;transform:translateY(20px);transition:.3s}
+#top.on{opacity:1;pointer-events:auto;transform:none}
+#toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,80px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:99px;font-weight:600;z-index:9000;transition:transform .4s cubic-bezier(.2,1.3,.4,1)}
+#toast.on{transform:translate(-50%,0)}
+h2.rv::after{content:'';display:block;height:8px;width:0;border-radius:9px;margin-top:12px;background:linear-gradient(90deg,var(--pink),var(--sun),var(--mint));transition:width 1s cubic-bezier(.2,1,.3,1) .3s}
+h2.rv.in::after{width:96px}#contact h2::after{margin-inline:auto}
+.role{display:flex;align-items:center;gap:10px;margin-top:18px;font-weight:700;font-size:clamp(16px,2vw,21px)}
+#rl{display:inline-block;background:var(--sun);border:2px solid var(--ink);border-radius:10px;padding:0 12px;box-shadow:3px 3px 0 var(--ink);animation:rin .4s cubic-bezier(.2,1.3,.4,1)}
+@keyframes rin{from{transform:translateY(60%) rotate(-4deg);opacity:0}}
+.fs{position:absolute;z-index:1;pointer-events:none;animation:fy 6s ease-in-out infinite}
+.fs.sp{animation:fy 6s ease-in-out infinite,sp 14s linear infinite}
+@keyframes fy{50%{translate:0 -22px}}@keyframes sp{to{rotate:360deg}}
+@media(max-width:800px){.fs{display:none}}
+.pb{position:fixed;z-index:9998;pointer-events:none;border-radius:50%;width:10px;height:10px;border:1.5px solid var(--ink)}
+.btn{will-change:translate}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.score div{opacity:1;transform:none}h1 .w span{transform:none}}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+</style>
+</head>
+<body>
+<div id="bar"></div><div id="cur"></div><div id="dot"></div>
+<nav>
+<a class="logo" href="#hero">Aditi.</a>
+<button class="burger" id="bg" aria-label="Open menu" aria-expanded="false">☰</button>
+<div class="menu" id="mn"><a href="#about">About</a><a href="#work">Projects</a><a href="#hack">Hackathons</a><a href="#certs">Credentials</a><a href="#contact">Contact</a></div>
+</nav>
+
+<section id="hero">
+<canvas id="cv" aria-hidden="true"></canvas>
+<div class="hero-t">
+<div class="badge"><i></i>Open to AI/ML and software internships</div>
+<h1><span class="w"><span>Hi,</span></span> <span class="w"><span style="animation-delay:.1s">I’m</span></span><br><span class="w"><span style="animation-delay:.2s">Aditi</span></span> <span class="w"><span style="animation-delay:.3s">Gupta.</span></span></h1>
+<div class="role">I’m a <span id="rl">AI/ML builder</span></div>
+<p class="lead">I build AI, computer-vision and full-stack products you can control with your hands, your voice or a single sentence.</p>
+<div class="acts">
+<a class="btn dk" href="#work">See my projects</a>
+<a class="btn mint" href="#contact">Get in touch</a>
+</div>
+</div>
+<svg class="fs sp" style="top:20%;left:48%" width="54" height="54" viewBox="0 0 48 48"><path d="M24 2l5 17 17 5-17 5-5 17-5-17-17-5 17-5z" fill="#FFE27A" stroke="#1E2A5A" stroke-width="2.4" stroke-linejoin="round"/></svg>
+<svg class="fs" style="top:68%;left:42%;animation-delay:-2s" width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="22" fill="none" stroke="#1E2A5A" stroke-width="3" stroke-dasharray="4 8" stroke-linecap="round"/></svg>
+<svg class="fs sp" style="top:30%;right:6%;animation-delay:-4s" width="40" height="40" viewBox="0 0 40 40"><path d="M20 4v32M4 20h32" stroke="#1E2A5A" stroke-width="4" stroke-linecap="round"/></svg>
+<svg class="fs" style="top:78%;right:14%;animation-delay:-1s" width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="13" fill="#A6F3D6" stroke="#1E2A5A" stroke-width="2.4"/></svg>
+<div class="hint">Scroll to explore ↓</div>
+</section>
+<div class="tick" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="about">
+<h2 class="rv">Who’s behind the code</h2>
+<div class="about rv">
+<div>
+<p>I’m a third-year B.Tech student in Computer Science (AI & ML) at Parul University, Vadodara. I like problems where software meets the real world: a patient chart you swipe through in the air, a shopping agent that understands what you mean, a game steered by your palm.</p>
+<p>I lead teams under 36-hour deadlines, practise DSA daily, and ship working demos, not slides.</p>
+<div class="skills" id="sk"></div>
+</div>
+<div class="score" id="score"><div><b>8.15</b>CGPA</div><div><b>365+</b>LeetCode solved</div><div><b>310+</b>CodeChef solved</div><div><b>8+</b>hackathons and programs</div></div>
+</div>
+</section>
+
+<section id="work">
+<h2 class="rv">Things I’ve built</h2>
+<p class="sub rv">Filter by type, tilt the cards, and click one for details.</p>
+<div class="filters rv" id="fl"></div>
+<div class="grid" id="grid"></div>
+</section>
+<div id="modal" role="dialog" aria-modal="true" aria-label="Project details"><div id="mb"></div></div>
+
+<section id="hack"><h2 class="rv">Building under pressure</h2><p class="sub rv">Seven hackathons and programs in 2026.</p><div id="hk"></div></section>
+
+<section id="certs"><h2 class="rv">Credentials</h2><p class="sub rv">Certifications and simulations from AWS, IBM, Microsoft, Certiport and Siemens.</p><div class="certs" id="cs"></div></section>
+
+<section id="contact">
+<h2 class="rv">Let’s build something.</h2>
+<p class="rv">Open to AI/ML, software and remote internships.</p>
+<div class="acts rv">
+<a class="btn dk" id="em" href="mailto:aditigupta1527@gmail.com">Email me</a>
+<a class="btn mint" href="https://www.linkedin.com/in/aditigupta27/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn alt" href="https://github.com/aditigupta1516" target="_blank" rel="noopener">GitHub</a>
+</div>
+</section>
+<footer>© 2026 Aditi Gupta. Vadodara, India.</footer>
+<button id="top" type="button" aria-label="Back to top">↑</button>
+<div id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const G='https://github.com/aditigupta1516/',EM='aditigupta1527@gmail.com';
+const P=[
+{n:'IntentFlow AI',d:'Agentic commerce prototype that turns a plain sentence into product discovery, recommendations, a checkout simulation and automated recovery workflows.',t:['JavaScript','HTML','CSS','GenAI'],c:'#FFA9CB',u:G+'IntentFlowAI',k:'Solo',f:'ai'},
+{n:'TrioMind',d:'Touchless patient-data navigator. Hand gestures and voice commands move through vitals, medications and records, with hands-free zoom, pan and search.',t:['MediaPipe','Web Speech API','JavaScript'],c:'#A6F3D6',u:G+'TrioMind',k:'Solo',f:'vision'},
+{n:'TRACEID',d:'Face-discovery and blockchain-based evidence verification platform.',t:['Face detection','Blockchain'],c:'#FFE27A',u:G,k:'Solo',f:'vision'},
+{n:'Gesture Racing Game',d:'A racing game steered by real-time hand landmarks from your webcam.',t:['Python','OpenCV','MediaPipe','Pygame'],c:'#8FD3FF',u:G,k:'Team',f:'vision'},
+{n:'Traveloop',d:'AI-assisted travel platform for recommendations, multi-city itineraries and budget management.',t:['Next.js','React','TypeScript','PostgreSQL','Prisma'],c:'#FFA9CB',u:G+'Traveloop',k:'Team',f:'ai web'},
+{n:'Student Verification',d:'Student document verification system with authentication and protected navigation.',t:['JavaScript','HTML','CSS'],c:'#A6F3D6',u:G+'student-documentation-and-verification',k:'Solo',f:'web'},
+{n:'TataPrototype',d:'Interactive dashboard interface with responsive web components.',t:['Dashboard UI','Responsive'],c:'#FFE27A',u:G,k:'Team',f:'web'},
+{n:'Greenbudg and more',d:'Greenbudg expense tracker, Cosmic Explorer, HHGOA Task 1 and other prototypes.',t:['JavaScript','Prototypes'],c:'#8FD3FF',u:G,k:'Solo',f:'web'}];
+const H=[['AI/ML Hackathon 2.0','Parul University. Team lead for a 3-member team in a 36-hour sprint. Built a hands-free healthcare interface with gesture and voice control.'],['HackOut’26','DA-IICT Gandhinagar, with Team StarkTech.'],['OOSC 4.0','Competed with Team StarkTech.'],['Adobe University Hackathon 2026','Participant.'],['Google Cloud Gen AI Academy APAC 2026','Cohort 2, generative AI program.'],['Smart India Hackathon 2026','Institute-level round.'],['Hacktivate 2.0','Built and presented a working solution.']];
+const ic=b=>`<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="#1E2A5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">${b}</svg>`;
+const C=[
+['AWS Certified Machine Learning: Specialty','Amazon Web Services','#FFB86B',ic('<path d="M13 34h22a8 8 0 0 0 1-16 11 11 0 0 0-21-2 9 9 0 0 0-2 18z" fill="#fff"/><circle cx="19" cy="26" r="2" fill="#1E2A5A"/><circle cx="29" cy="22" r="2" fill="#1E2A5A"/><circle cx="29" cy="30" r="2" fill="#1E2A5A"/><path d="M19 26l10-4M19 26l10 4"/>')],
+['Python Programming','IBM','#8FD3FF',ic('<rect x="9" y="8" width="20" height="20" rx="7" fill="#fff"/><rect x="19" y="20" width="20" height="20" rx="7" fill="#FFE27A"/><circle cx="16" cy="15" r="1.6" fill="#1E2A5A"/><circle cx="32" cy="33" r="1.6" fill="#1E2A5A"/>')],
+['IT Specialist: JavaScript','Certiport (Pearson VUE)','#FFE27A',ic('<rect x="8" y="8" width="32" height="32" rx="9" fill="#fff"/><path d="M20 18v10a3 3 0 0 1-6 0M27 29c1 2 8 2 8-2s-8-2-8-6 7-4 8-1"/>')],
+['IT Specialist: HTML & CSS','Certiport (Pearson VUE)','#FFA9CB',ic('<rect x="6" y="10" width="36" height="28" rx="8" fill="#fff"/><path d="M19 19l-6 5 6 5M29 19l6 5-6 5M26 17l-4 14"/>')],
+['Prompt Engineering with GitHub Copilot','Microsoft / Simplilearn','#A6F3D6',ic('<path d="M22 6l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="#fff"/><path d="M38 6v8M34 10h8"/>')],
+['Project Manager Job Simulation','Siemens Mobility on Forage','#C9D3FF',ic('<rect x="11" y="8" width="26" height="26" rx="8" fill="#fff"/><path d="M11 22h26"/><circle cx="18" cy="28" r="1.8" fill="#1E2A5A"/><circle cx="30" cy="28" r="1.8" fill="#1E2A5A"/><path d="M16 40l4-6M32 40l-4-6"/>')]];
+const S='Java,Python,C++,JavaScript,TypeScript,SQL,React,Next.js,Node.js,Flask,Tailwind,OpenCV,MediaPipe,NumPy,pandas,PostgreSQL,Prisma,AWS,Git'.split(',');
+$('#mq').innerHTML='AI / ML • Computer Vision • Full-Stack • Gesture Control • Hackathons • '.repeat(6);
+$('#sk').innerHTML=S.map(x=>`<span>${x}</span>`).join('');
+$('#fl').innerHTML=[['all','All'],['ai','AI'],['vision','Computer vision'],['web','Web']].map((f,i)=>`<button type="button" data-f="${f[0]}" class="${i?'':'on'}">${f[1]}</button>`).join('');
+$('#grid').innerHTML=P.map((p,i)=>`<button class="pc rv" type="button" data-i="${i}" data-f="${p.f}" style="--c:${p.c};transition-delay:${i%3*70}ms"><div><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${p.n}</h3><p>${p.d.slice(0,80)}…</p></div><span class="go">View details ↗</span></button>`).join('');
+$('#hk').innerHTML=H.map(h=>`<div class="row rv"><b>2026</b><div><h3>${h[0]}</h3><p>${h[1]}</p></div></div>`).join('');
+$('#cs').innerHTML=C.map(c=>`<div class="cc rv" style="--c:${c[2]}"><div class="ico">${c[3]}</div><div><div class="t">${c[0]}</div><small>${c[1]}</small></div></div>`).join('');
+/* toast + copy */
+let tt;const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2200)};
+const copy=async()=>{try{await navigator.clipboard.writeText(EM);toast('Email copied: '+EM)}catch(e){try{const a=document.createElement('textarea');a.value=EM;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();toast('Email copied: '+EM)}catch(_){toast('Email: '+EM)}}};
+$('#em').addEventListener('click',copy);
+/* mobile menu */
+const mn=$('#mn'),bg=$('#bg');
+bg.onclick=()=>{const o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.textContent=o?'✕':'☰'};
+mn.onclick=e=>{if(e.target.tagName==='A'){mn.classList.remove('open');bg.textContent='☰'}};
+/* filters */
+$('#fl').onclick=e=>{const b=e.target.closest('button');if(!b)return;$$('#fl button').forEach(x=>x.classList.toggle('on',x===b));$$('.pc').forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&!c.dataset.f.split(' ').includes(b.dataset.f)))};
+/* modal */
+const M=$('#modal'),MB=$('#mb');let cur=0,last;
+const show=i=>{const L=$$('.pc:not(.hide)').map(x=>+x.dataset.i);cur=i;const p=P[i];
+MB.innerHTML=`<button class="x" type="button" aria-label="Close">×</button><h3>${p.n}</h3><p>${p.d}</p><div class="tags">${p.t.map(x=>`<span>${x}</span>`).join('')}</div><div class="ft"><a class="btn dk" href="${p.u}" target="_blank" rel="noopener">Open on GitHub</a><button class="btn alt" type="button" id="pv">← Prev</button><button class="btn mint" type="button" id="nx">Next →</button></div>`;
+const k=L.indexOf(i);$('#pv').onclick=()=>show(L[(k-1+L.length)%L.length]);$('#nx').onclick=()=>show(L[(k+1)%L.length]);MB.querySelector('.x').onclick=close;MB.querySelector('.x').focus()};
+const open=i=>{last=document.activeElement;M.classList.add('on');show(i)};
+const close=()=>{M.classList.remove('on');last&&last.focus()};
+$('#grid').onclick=e=>{const c=e.target.closest('.pc');if(c)open(+c.dataset.i)};
+M.onclick=e=>{if(e.target===M)close()};
+addEventListener('keydown',e=>{if(!M.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')$('#nx').click();if(e.key==='ArrowLeft')$('#pv').click()});
+/* tilt */
+$$('.pc').forEach(c=>{c.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`rotateY(${x*18}deg) rotateX(${-y*18}deg) scale(1.03)`;c.style.setProperty('--mx',(x+.5)*100+'%');c.style.setProperty('--my',(y+.5)*100+'%')});c.addEventListener('pointerleave',()=>c.style.transform='')});
+/* scroll: progress, top button, active nav */
+const topb=$('#top');
+addEventListener('scroll',()=>{$('#bar').style.width=scrollY/(document.body.scrollHeight-innerHeight)*100+'%';topb.classList.toggle('on',scrollY>600)},{passive:true});
+topb.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('.menu a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+['about','work','hack','certs','contact'].forEach(id=>sio.observe($('#'+id)));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(e=>io.observe(e));
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){$$('#score div').forEach((d,i)=>setTimeout(()=>d.classList.add('st'),i*120));o.disconnect()}},{threshold:.3}).observe($('#score'));
+/* cursor: moves only on demand */
+const cu=$('#cur'),dt=$('#dot');let mx=-50,my=-50,cx=-50,cy=-50,run=false;
+const loop=()=>{cx+=(mx-cx)*.16;cy+=(my-cy)*.16;cu.style.transform=`translate3d(${cx}px,${cy}px,0)`;dt.style.transform=`translate3d(${mx}px,${my}px,0)`;if(Math.abs(mx-cx)+Math.abs(my-cy)>.3)requestAnimationFrame(loop);else run=false};
+addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cu.classList.toggle('big',!!e.target.closest('a,button,.cc'));if(!run){run=true;requestAnimationFrame(loop)}},{passive:true});
+/* extra animations */
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const roles=['AI/ML builder','computer-vision tinkerer','full-stack developer','hackathon team lead','DSA problem solver'];let ri=0;
+if(!rm)setInterval(()=>{ri=(ri+1)%roles.length;const r=$('#rl');r.style.animation='none';r.offsetWidth;r.textContent=roles[ri];r.style.animation=''},1500);
+if(!rm){
+$$('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const r=b.getBoundingClientRect();b.style.translate=((e.clientX-r.left-r.width/2)*.22)+'px '+((e.clientY-r.top-r.height/2)*.32)+'px'});b.addEventListener('pointerleave',()=>b.style.translate='')});
+addEventListener('click',e=>{const cs=['#FFA9CB','#FFE27A','#A6F3D6','#8FD3FF'];for(let i=0;i<12;i++){const d=document.createElement('div');d.className='pb';d.style.background=cs[i%4];d.style.left=e.clientX-5+'px';d.style.top=e.clientY-5+'px';document.body.appendChild(d);const a=i/12*6.283+Math.random()*.4,s=34+Math.random()*40;d.animate([{transform:'translate(0,0) scale(1)',opacity:1},{transform:`translate(${Math.cos(a)*s}px,${Math.sin(a)*s}px) scale(.3)`,opacity:0}],{duration:650,easing:'cubic-bezier(.2,.9,.3,1)'}).onfinish=()=>d.remove()}});
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){$$('#score b').forEach(b=>{const t=b.textContent,n=parseFloat(t),sx=t.replace(/[0-9.]/g,''),dec=t.includes('.')?2:0,s=performance.now();(function f(now){const k=Math.min((now-s)/1200,1),v=n*(1-Math.pow(1-k,3));b.textContent=v.toFixed(dec)+sx;if(k<1)requestAnimationFrame(f)})(s)});o.disconnect()}},{threshold:.4}).observe($('#score'))}
+/* 3D hero: pauses when off-screen */
+try{
+const cv=$('#cv'),R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});R.setPixelRatio(Math.min(devicePixelRatio,1.5));
+const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,1,.1,100);cam.position.z=9;
+sc.add(new THREE.HemisphereLight(0xffffff,0x8FD3FF,1));
+const l1=new THREE.PointLight(0xA6F3D6,2,30);l1.position.set(-5,3,6);sc.add(l1);
+const l2=new THREE.PointLight(0xffffff,1.4,30);l2.position.set(5,5,7);sc.add(l2);
+const geo=new THREE.SphereGeometry(2.3,64,48),p=geo.attributes.position,o=p.array.slice();
+const blob=new THREE.Mesh(geo,new THREE.MeshPhysicalMaterial({color:0xFFA9CB,roughness:.18,metalness:.05,clearcoat:1,clearcoatRoughness:.1}));sc.add(blob);
+const cols=[0xFFA9CB,0xA6F3D6,0x8FD3FF,0xFFE27A].map(c=>new THREE.Color(c));
+let tx=0,ty=0,bx=0,by=0,t=0,vis=true;
+addEventListener('pointermove',e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5},{passive:true});
+const rs=()=>{const w=cv.clientWidth,h=cv.clientHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();blob.position.set(w>800?3.4:0,w>800?0:2.6,0)};
+rs();addEventListener('resize',rs);
+new IntersectionObserver(e=>{vis=e[0].isIntersecting;if(vis)fr()}).observe($('#hero'));
+function fr(){if(!vis||document.hidden)return;t+=.012;bx+=(tx-bx)*.04;by+=(ty-by)*.04;
+const A=p.array;for(let i=0;i<A.length;i+=3){const x=o[i],y=o[i+1],z=o[i+2];const n=Math.sin(x*1.3+t)+Math.sin(y*1.6+t*1.3)+Math.sin(z*1.2+t*.8);const k=1+.07*n+(x*bx*2-y*by*2)/2.3*.18;A[i]=x*k;A[i+1]=y*k;A[i+2]=z*k}
+const pr=Math.min(scrollY/(innerHeight*.9),.999)*3,i0=Math.floor(pr);blob.material.color.copy(cols[i0]).lerp(cols[i0+1],pr-i0);
+p.needsUpdate=true;geo.computeVertexNormals();blob.rotation.y=t*.4+bx;blob.rotation.x=by*.6;R.render(sc,cam);requestAnimationFrame(fr)}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&vis)fr()});
+fr();
+}catch(e){}
+</script>
+</body>
+</html>
